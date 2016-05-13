@@ -26,3 +26,10 @@ var returnDateTime = 25569.0 + ((inDate.getTime() - (inDate.getTimezoneOffset() 
 return returnDateTime.toString().substr(0,20);
 
 }
+
+var display_horoscope = function {
+//pull horoscope from api
+//display fun fact
+}
+
+//reason for conception???
