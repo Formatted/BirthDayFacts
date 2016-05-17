@@ -37,7 +37,7 @@ var givenStr = $("#add_task").val(); // mm/dd/yyyy
 var month = givenStr.slice(0, 2); // /dd/yyyy
 var day = givenStr.slice(3, 5); // //yyyy
 var date = "&date=2009-" + Number(month) + "-" + Number(day);
-console.log(fixed + date);
+console.log(fixed + zodiac() + date);
 $.get(fixed + date).success(displayAPI);
 }
 var displayAPI = function(apiData){
