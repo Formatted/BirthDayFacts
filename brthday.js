@@ -1,5 +1,5 @@
 $("#add_button").on("click", function(e){
-	getLink();
+	display_horoscope();
 })
 
 var getLink = function(){
