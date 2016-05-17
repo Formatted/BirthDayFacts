@@ -30,7 +30,7 @@ return returnDateTime.toString().substr(0,20);
 var display_horoscope = function() {
 //pull horoscope from api
 //display fun fact
-// http://widgets.fabulously40.com/horoscope.json?sign=aries&date=2009-05-03
+// http://widgets.fabulously40.com/horoscope.json?sign=aries&date=2009-05-03 YYYY-mm-DD
 var fixed = "http://widgets.fabulously40.com/horoscope.json?sign=";
 var sign = zodiac();
 var givenStr = $("#add_task").val(); // mm/dd/yyyy
@@ -38,8 +38,12 @@ var month = givenStr.slice(0, 2); // /dd/yyyy
 var day = givenStr.slice(3, 5); // //yyyy
 var date = "&date=2009-" + Number(month) + "-" + Number(day);
 console.log(fixed + date);
+$.get(fixed + date).success(displayAPI);
 }
+var displayAPI = function(apiData){
 
+	alert(apiData);
+}
 //reason for conception???
 
 function zodiac() {
