@@ -27,6 +27,11 @@ return returnDateTime.toString().substr(0,20);
 
 }
 
+var displayAPI = function(apiData){
+
+	alert(apiData);
+}
+
 var display_horoscope = function() {
 //pull horoscope from api
 //display fun fact
@@ -38,12 +43,9 @@ var month = givenStr.slice(0, 2); // /dd/yyyy
 var day = givenStr.slice(3, 5); // //yyyy
 var date = "&date=2009-" + Number(month) + "-" + Number(day);
 console.log(fixed + zodiac() + date);
-$.get(fixed + date).success(displayAPI);
+$.get(fixed + zodiac() + date).success(displayAPI);
 }
-var displayAPI = function(apiData){
 
-	alert(apiData);
-}
 //reason for conception???
 
 function zodiac() {
