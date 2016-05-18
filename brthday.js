@@ -56,7 +56,7 @@ function zodiac() {
 	var numerical_month = Number(month);
 	var numerical_day = Number(day);
 
-	var signs = ["Carpricorn", "Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius"];
+	var signs = ["Capricorn", "Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius"];
 
 	if((numerical_month == 1 && numerical_day <= 20) || (numerical_month == 12 && numerical_day >=22)) {
     return signs[0];
