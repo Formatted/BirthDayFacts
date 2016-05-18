@@ -3,6 +3,10 @@
 	color: snow; text-align: center; background-color: orchid; opacity: 0.5;
 }
 
+#birthday {
+	font-size: 72px;
+}
+
 .explain {
 	height:30px; width: 100%; font-family: 'Belleza', sans-serif; text-align: center;
 }
