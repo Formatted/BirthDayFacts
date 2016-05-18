@@ -1,7 +1,7 @@
 $("#add_button").on("click", function(e){
+  bDayChk()
   wiki_page();
- // display_horoscope();
- zodiac();
+  zodiac();
 });
 
 var getLink = function(){
@@ -135,4 +135,22 @@ function wiki_page() {
 
   $('.embed_wiki').html("<iframe src=" + wikilink + " " + "width='600' height='600'></iframe");
 }
+
+function bDayChk(){
+  var givenStr = $("#add_task").val(); // mm/dd/yyyy
+  var month = givenStr.slice(0, 2); // /dd/yyyy
+  var day = givenStr.slice(3, 5); // //yyyy
+    var numerical_month = Number(month);
+  var numerical_day = Number(day);
+
+var todayDate = new Date();
+    var tday = todayDate.getDate();
+    var tmonth = todayDate.getMonth() + 1;
+
+    if (numerical_month == tmonth)  {
+        if (numerical_day == tday) {
+          alert("Happy Birthday!!!");
+        }
+    }
+  }
 
